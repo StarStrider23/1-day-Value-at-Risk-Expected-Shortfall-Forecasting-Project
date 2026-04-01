@@ -101,7 +101,7 @@ data_mult = yf.download(multiple_assets, start_date, end_date)['Close']
 for keys_vol, values_vol in vol.items():
     for keys_drift, values_drift in drift.items():
         for keys_dist, values_dist in dist.items():
-            results_p2 = var_es_comparison(data, market_data, rf_data, 
+            results_p2 = var_es_comparison(data_mult, market_data, rf_data, 
                                 sample_days, values_dist, values_drift, values_vol, 
                                 backtesting=False, tests=False, steps=1, n_sim=10000)
             print(f"The results for the model with {keys_dist}, {keys_drift} and {keys_vol} are: {results_p2}")
