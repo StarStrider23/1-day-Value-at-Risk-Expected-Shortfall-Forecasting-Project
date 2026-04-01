@@ -33,7 +33,7 @@ The files with the distributions, drift and volatility models are located in the
 
 Historical VaR = -0.0438, historical ES = -0.0593
 
-| Model | VaR	| VaR % diff  |	ES  |	ES % diff | Kupiec test | Christoffersen test |
+| Model | VaR	| VaR % diff |	ES  |	ES % diff | Kupiec test | Christoffersen test |
 |---|---|---|---|---|
 | Normal, const drift & volatility | -0.0396 | 9.6% |	-0.0451 | 23.9% |
 | t, const drift & volatility | -0.0425 | 3.0% | -0.0571  |	3.8% |
