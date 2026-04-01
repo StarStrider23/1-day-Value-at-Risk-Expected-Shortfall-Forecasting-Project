@@ -44,7 +44,7 @@ Historical VaR = -0.0438, historical ES = -0.0593
 | Normal, CAPM & GARCH | -0.0404 |	7.8% |	-0.0459 |	22.2% |
 | t, CAPM & GARCH	| -0.0473 |	8.1% | -0.0624 | 5.2% |
 
-All models produced 7/1000 violations. The Kupiec and Christoffersen test for all models yielded: 1.001 and 0.0989
+All models produced 7/1000 violations. The Kupiec and Christoffersen tests yielded 1.001 and 0.0989 respectively.
 
 ### Multi-asset (MSFT, AAPL and GOOGL)
 
