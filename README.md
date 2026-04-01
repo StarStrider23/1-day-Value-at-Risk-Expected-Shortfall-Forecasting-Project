@@ -29,7 +29,7 @@ It should also be mentioned that the dataset spaned approximately four years of 
 
 Historical VaR = -0.0438, historical ES = -0.0593
 
-| Model | VaR	| VaR % diff  |	ES  |	ES % diff |
+| Model | VaR	| VaR % diff  |	ES  |	ES % diff | Kupiec test | Christoffersen test |
 |---|---|---|---|---|
 | Normal, const drift & volatility | -0.0396 | 9.6% |	-0.0451 | 23.9% |
 | t, const drift & volatility | -0.0425 | 3.0% | -0.0571  |	3.8% |
@@ -39,6 +39,8 @@ Historical VaR = -0.0438, historical ES = -0.0593
 | t, const drift & GARCH | -0.0464 |	5.9% |	-0.0613 |	3.3% |
 | Normal, CAPM & GARCH | -0.0404 |	7.8% |	-0.0459 |	22.2% |
 | t, CAPM & GARCH	| -0.0473 |	8.1% | -0.0624 | 5.2% |
+
+All models produced 7/1000 violations. The Kupiec and Christoffersen test for all models yielded: 1.001 and 0.0989
 
 ### Multi-asset (MSFT, AAPL and GOOGL)
 
@@ -66,6 +68,8 @@ This difference can be explained by the effect of diversification. When combinin
 Across both settings, the inclusion of CAPM-based drift and GARCH(1,1) volatility does not lead to consistent improvements in forecasting performance. While these models are theoretically more sophisticated and capture important financial phenomena such as time-varying volatility and systematic risk exposure, their benefits appear limited in the context of unconditional 1-day risk forecasting. In practice, the additional estimation complexity may introduce noise that offsets their theoretical advantages.
 
 Finally, the backtesting results for the single asset indicate that all models produce an acceptable number of VaR violations and pass both the Kupiec and Christoffersen tests. In particular, every model produced only 7 violations out of 1000 observations, which makes up less than 1%. This suggests that, despite differences in accuracy, the models are statistically adequate in terms of coverage and independence of violations. However, these tests alone are not sufficient to distinguish between models, as they do not capture the magnitude of tail losses, which is better reflected in the ES metric.
+
+One could probably notice the fact that all the models produced identical results for Kupiec and Christoffersen tests. For 1-day 99th percentile VaR over 1000 days, the number of expected violations is very small, so many models produce nearly identical violating days. As a result, Kupiec and Christoffersen tests give similar statistics, which reflects the sparsity of extreme events rather than an implementation error. This was confirmed by bactesting the models at the 95th percentile, which then gave different results for each of the models. 
 
 Overall, the findings highlight that model selection should be driven by the specific application and level of aggregation. While heavy-tailed distributions are essential for accurately modeling individual asset risk, simpler models may be more appropriate for diversified portfolios, where extreme risks are naturally mitigated.
 
