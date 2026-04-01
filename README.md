@@ -40,9 +40,37 @@ Historical VaR = -0.0438, historical ES = -0.0593
 
 ### Multi-asset (MSFT, AAPL and GOOGL)
 
-Historical VaR = -0.0438, historical ES = -0.0593
+Historical VaR = -0.0417, historical ES = -0.0491
 
 | Model | VaR	| VaR % diff  |	ES  |	ES % diff |
 |---|---|---|---|---|
+|Normal, const drift & volatility | -0.0347 |	16.9% |	-0.0401 |	18.2% |
+|Student-t, const drift & volatility |	-0.0543 |	30.0%	| -0.0690 |	40.6% |
+|Normal, CAPM & const volatility |	-0.0357 |	14.4% |	-0.0406 |	17.3% |
+|t, CAPM & const volatility	-0.0562 |	34.7% |	-0.0782 |	59.2% |
+|Normal, const drift & GARCH |	-0.0356 |	14.6% |	-0.0406 |	17.3% |
+|t, const drift & GARCH	-0.0556 |	33.3% |	-0.0764 |	55.7% |
+|Normal, CAPM & GARCH	-0.0352 |	15.8%	| -0.0410 |	16.4% |
+|t, CAPM & GARCH |	-0.0564 |	35.2% |	-0.0750 |	52.7% |
 
+## Discussion
 
+The results reveal a clear and somewhat non-trivial pattern in the performance of the different models. For the single-asset case, models based on the Student’s t-distribution consistently produce more accurate estimates of both VaR and ES compared to their normal counterparts. This is particularly evident for Expected Shortfall, where the normal distribution significantly underestimates tail risk. This finding aligns with well-known stylized facts in financial markets, namely that individual asset returns exhibit fat tails and extreme events occur more frequently than predicted by the normal distribution.
+
+However, this pattern reverses in the multi-asset portfolio setting. In contrast to the single-asset results, models based on the Student’s t-distribution systematically overestimate risk, producing VaR and ES values that deviate substantially from historical benchmarks. Instead, models assuming normally distributed returns provide more accurate and stable estimates for the diversified portfolio.
+
+This difference can be explained by the effect of diversification. When combining multiple assets, idiosyncratic extreme events tend to offset each other, leading to a distribution of portfolio returns that is closer to normal. As a result, heavy-tailed assumptions that are appropriate at the individual asset level may become overly conservative when applied to an aggregated portfolio. This suggests that heavy-tailed behavior is largely idiosyncratic and diversifiable.
+
+Across both settings, the inclusion of CAPM-based drift and GARCH(1,1) volatility does not lead to consistent improvements in forecasting performance. While these models are theoretically more sophisticated and capture important financial phenomena such as time-varying volatility and systematic risk exposure, their benefits appear limited in the context of unconditional 1-day risk forecasting. In practice, the additional estimation complexity may introduce noise that offsets their theoretical advantages.
+
+Finally, the backtesting results for the single asset indicate that all models produce an acceptable number of VaR violations and pass both the Kupiec and Christoffersen tests. In particular, every model produced only 7 violations out of 1000 observations, which makes up less than 1 percent. This suggests that, despite differences in accuracy, the models are statistically adequate in terms of coverage and independence of violations. However, these tests alone are not sufficient to distinguish between models, as they do not capture the magnitude of tail losses, which is better reflected in the ES metric.
+
+Overall, the findings highlight that model selection should be driven by the specific application and level of aggregation. While heavy-tailed distributions are essential for accurately modeling individual asset risk, simpler models may be more appropriate for diversified portfolios, where extreme risks are naturally mitigated.
+
+## Outlook
+
+This project focuses on 1-day ahead risk forecasting, but the framework can be naturally extended to multi-day (n-day) VaR and Expected Shortfall.
+
+For models based on constant volatility, such as standard Geometric Brownian Motion with normally distributed returns, multi-day risk measures can be approximated using the square-root-of-time rule, where volatility (and therefore VaR and ES) scales with √n. This approach relies on the assumption of independent and identically distributed returns.
+
+However, this scaling does not apply to GARCH-type models, where volatility evolves over time and depends on past shocks. In such models, returns are heteroskedastic and serially dependent, meaning that future risk cannot be obtained through simple scaling. Instead, multi-day forecasts require iterative simulation or recursive volatility forecasting, which significantly increases computational complexity.
