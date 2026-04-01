@@ -93,7 +93,7 @@ for keys_vol, values_vol in vol.items():
             print(f"The results for the model with {keys_dist}, {keys_drift} and {keys_vol} are: {results_p1}")
             print()
 
-# Multi asset precision of the models
+# Precision evaluation of the multiple asset case
 
 multiple_assets = ['AAPL', 'GOOGL', 'MSFT']
 data_mult = yf.download(multiple_assets, start_date, end_date)['Close']
