@@ -25,5 +25,6 @@ class t_Distribution:
         else:
             Z = np.random.normal(size=(n_assets, n_sim))
             chi = np.random.chisquare(self.df, size=n_sim)
-            scaling = np.sqrt(self.df / chi)
-            return Z * scaling
+            scaling = np.sqrt(self.df/chi)
+            t = Z * scaling
+            return t
