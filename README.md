@@ -23,6 +23,10 @@ Finally, model performance is evaluated through backtesting on the single-asset 
 
 It should also be mentioned that the dataset spaned approximately four years of daily observations, of which the last 1000 days were used for backtesting.
 
+## Structure
+
+The files with the distributions, drift and volatility models are located int he models folder. The monte_carlo folder contains the engine, i.e. the Monte Carlo simulation itself. The Kupiec and Christoffersen tests are in the test folder. Finally, the main.py file is the file where everything is imported to and executed. 
+
 ## Results 
 
 ### Single-asset (MSFT)
