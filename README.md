@@ -26,12 +26,20 @@ Finally, model performance is evaluated through backtesting on the single-asset 
 ### Single-asset (MSFT)
 
 | Model | VaR	| VaR % diff  |	ES  |	ES % diff |
+|---|---|---|---|---|
 | Normal, const drift & volatility | -0.0396 | 9.6% |	-0.0451 | 23.9% |
+|---|---|---|---|---|
 | t, const drift & volatility | -0.0425 |	3.0%  |	-0.0571  |	3.8% |
+|---|---|---|---|---|
 | Normal, CAPM & const volatility |	-0.0391  |	10.7%  |	-0.0450	24.1% |
+|---|---|---|---|---|
 | t, CAPM & const volatility | -0.0444	1.4%	-0.0617	4.0% |
+|---|---|---|---|---|
 | Normal, const drift & GARCH	| -0.0406	7.3%	-0.0464	21.8% |
+|---|---|---|---|---|
 | t, const drift & GARCH | -0.0464	5.9%	-0.0613	3.3% |
+|---|---|---|---|---|
 | Normal, CAPM & GARCH | -0.0404	7.8%	-0.0459	22.2% |
+|---|---|---|---|---|
 | t, CAPM & GARCH	| -0.0473 |	8.1% | -0.0624 | 5.2% |
 
