@@ -47,10 +47,10 @@ Historical VaR = -0.0417, historical ES = -0.0491
 |Normal, const drift & volatility | -0.0347 |	16.9% |	-0.0401 |	18.2% |
 |Student-t, const drift & volatility |	-0.0543 |	30.0%	| -0.0690 |	40.6% |
 |Normal, CAPM & const volatility |	-0.0357 |	14.4% |	-0.0406 |	17.3% |
-|t, CAPM & const volatility	-0.0562 |	34.7% |	-0.0782 |	59.2% |
+|t, CAPM & const volatility |	-0.0562 |	34.7% |	-0.0782 |	59.2% |
 |Normal, const drift & GARCH |	-0.0356 |	14.6% |	-0.0406 |	17.3% |
-|t, const drift & GARCH	-0.0556 |	33.3% |	-0.0764 |	55.7% |
-|Normal, CAPM & GARCH	-0.0352 |	15.8%	| -0.0410 |	16.4% |
+|t, const drift & GARCH |	-0.0556 |	33.3% |	-0.0764 |	55.7% |
+|Normal, CAPM & GARCH |	-0.0352 |	15.8%	| -0.0410 |	16.4% |
 |t, CAPM & GARCH |	-0.0564 |	35.2% |	-0.0750 |	52.7% |
 
 ## Discussion
