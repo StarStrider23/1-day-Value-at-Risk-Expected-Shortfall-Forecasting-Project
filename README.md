@@ -25,7 +25,7 @@ It should also be mentioned that the dataset spaned approximately four years of 
 
 ## Structure
 
-The files with the distributions, drift and volatility models are located in the models folder. The monte_carlo folder contains the engine, i.e. the Monte Carlo simulation itself. The Kupiec and Christoffersen tests are in the test folder. Finally, the main.py file is the file where everything is imported to and executed. 
+The models folder contains the distribution, drift and volatility model definitions. The monte_carlo folder includes the Monte Carlo simulation engine file. The test folder contains the file test.py that implements the Kupiec and Christoffersen tests. Finally, main.py ties everything together and executes the workflow.
 
 ## Results 
 
