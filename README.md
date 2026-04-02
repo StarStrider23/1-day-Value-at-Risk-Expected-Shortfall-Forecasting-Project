@@ -29,39 +29,65 @@ The models folder contains the distribution, drift and volatility model definiti
 
 ## Results 
 
+Results are averaged across 10 simulation runs to reduce Monte Carlo variability and provide more robust performance estimates.
+
 ### Single-asset (MSFT)
 
-Historical VaR = -0.0438, historical ES = -0.0593
+Historical VaR = -0.0438
 
-|---| Run 1 | Run 1 | Run 1 | Run 1 | Run 2 | Run 2 |Run 2 |Run 2 | Run 3 | Run 3 | Run 3 | Run 3 | 
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Model | VaR	| VaR % diff |	ES  |	ES % diff | VaR	| VaR % diff |	ES  |	ES % diff | VaR	| VaR % diff |	ES  |	ES % diff |
-| Normal, const drift & volatility | -0.0396 | 9.6% |	-0.0451 | 23.9% | -0.0390 | 10.87%	| -0.0447 | 24.65% |	-0.0395 |	9.85% |	-0.0454 |	23.52% |
-| t, const drift & volatility | -0.0425 | 3.0% | -0.0571  |	3.8% | -0.04223 |	3.56% |	-0.0575 |	3.17%	| -0.0436 | 0.40% | -0.0573 |	3.46% |
-| Normal, CAPM & const volatility |	-0.0391 |	10.7% |	-0.0450 |	24.1% | -0.0378 |	13.58% |	-0.0434 |	26.83% |	-0.0384 |	12.31%	| -0.0436 |	26.50% |
-| t, CAPM & const volatility | -0.0444 | 1.4%	| -0.0617 |	4.0% | -0.0433 |	1.05% |	-0.0618 |	4.11% |	-0.0456 |	4.08% |	-0.0653 |	10.07% |
-| Normal, const drift & GARCH	| -0.0406 |	7.3% |	-0.0464 |	21.8% | -0.0407 |	7.08%	 |-0.0459 |	22.65% |	-0.0408 |	6.74%	 |-0.0463 |	21.92% |
-| t, const drift & GARCH | -0.0464 |	5.9% |	-0.0613 |	3.3% | -0.0488 |	11.32% |	-0.0627 |	5.59% |	-0.0467 |	6.60% |	-0.0633 |	6.65% |
-| Normal, CAPM & GARCH | -0.0404 |	7.8% |	-0.0459 |	22.2% | -0.0409 |	6.62% |	-0.0467 |	21.38% |	-0.0402 |	8.23% |	-0.0456 |	23.22% |
-| t, CAPM & GARCH	| -0.0473 |	8.1% | -0.0624 | 5.2% | -0.0473 |	8.05% |	-0.0666 |	12.23% |	-0.0442 |	0.89% |	-0.0580 | 2.29% |
+| Model | Mean ES | Mean VaR% | Median | Standard deviation | Min | Max |
+|---|---|---|---|---|---|---|
+| Normal, const drift & volatility |  | | | | |	|
+| t, const drift & volatility | | | | | |	|
+| Normal, CAPM & const volatility | | | | | | |
+| t, CAPM & const volatility | | | | | | |
+| Normal, const drift & GARCH	| | | | | |	|
+| t, const drift & GARCH | | | | | | |
+| Normal, CAPM & GARCH | | | | | | |
+| t, CAPM & GARCH	| | | | | |	|
+
+Historical ES = -0.0593
+
+| Model | Mean | Mean ES% | Median | Standard deviation | Min | Max |
+|---|---|---|---|---|---|---|
+| Normal, const drift & volatility |  | | | | |	|
+| t, const drift & volatility | | | | | |	|
+| Normal, CAPM & const volatility | | | | | | |
+| t, CAPM & const volatility | | | | | | |
+| Normal, const drift & GARCH	| | | | | |	|
+| t, const drift & GARCH | | | | | | |
+| Normal, CAPM & GARCH | | | | | | |
+| t, CAPM & GARCH	| | | | | |	|
 
 All models produced 7/1000 violations. The Kupiec and Christoffersen tests yielded 1.001 and 0.0989 respectively.
 
 ### Multi-asset (MSFT, AAPL and GOOGL)
 
-Historical VaR = -0.0417, historical ES = -0.0491
+Historical VaR = -0.0417
 
-|---| Run 1 | Run 1 | Run 1 | Run 1 | Run 2 | Run 2 |Run 2 |Run 2 | Run 3 | Run 3 | Run 3 | Run 3 | 
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Model | VaR	| VaR % diff |	ES  |	ES % diff | VaR	| VaR % diff |	ES  |	ES % diff | VaR	| VaR % diff |	ES  |	ES % diff |
-|Normal, const drift & volatility | -0.0347 |	16.9% |	-0.0401 |	18.2% |  -0.0359 | 14.0% | -0.0411 | 16.2% | -0.0353 | 15.4% | -0.0398 | 18.9% |
-|Student-t, const drift & volatility |	-0.0543 |	30.0%	| -0.0690 |	40.6% | -0.0553 | 32.7% | -0.0736 | 49.9% | -0.0530 | 26.9% | -0.0709 | 44.5% |
-|Normal, CAPM & const volatility |	-0.0357 |	14.4% |	-0.0406 |	17.3% |  -0.0348 | 16.7% | -0.0396 | 19.3% | -0.0350 | 16.2% | -0.0397 | 19.1% |
-|t, CAPM & const volatility |	-0.0562 |	34.7% |	-0.0782 |	59.2% | -0.0555 | 33.0% | -0.0702 | 42.9% | -0.0575 | 37.7% | -0.0800 | 63.0% |
-|Normal, const drift & GARCH |	-0.0356 |	14.6% |	-0.0406 |	17.3% |  -0.0353 | 15.3% | -0.0408 | 16.8% | -0.0360 | 13.7% | -0.0413 | 15.9% |
-|t, const drift & GARCH |	-0.0556 |	33.3% |	-0.0764 |	55.7% | -0.0556 | 33.2% | -0.0741 | 50.9% | -0.0520 | 24.8% | -0.0738 | 50.3% |
-|Normal, CAPM & GARCH |	-0.0352 |	15.8%	| -0.0410 |	16.4% | -0.0360 | 13.6% | -0.0404 | 17.8% | -0.0350 | 16.0% | -0.0403 | 18.0% |
-|t, CAPM & GARCH |	-0.0564 |	35.2% |	-0.0750 |	52.7% | -0.0566 | 35.8% | -0.0826 | 68.3% | -0.0574 | 37.5% | -0.0782 | 59.3% |
+| Model | Mean ES | Mean VaR% | Median | Standard deviation | Min | Max |
+|---|---|---|---|---|---|---|
+| Normal, const drift & volatility |  | | | | |	|
+| t, const drift & volatility | | | | | |	|
+| Normal, CAPM & const volatility | | | | | | |
+| t, CAPM & const volatility | | | | | | |
+| Normal, const drift & GARCH	| | | | | |	|
+| t, const drift & GARCH | | | | | | |
+| Normal, CAPM & GARCH | | | | | | |
+| t, CAPM & GARCH	| | | | | |	|
+
+Historical ES = -0.0491
+
+| Model | Mean | Mean ES% | Median | Standard deviation | Min | Max |
+|---|---|---|---|---|---|---|
+| Normal, const drift & volatility |  | | | | |	|
+| t, const drift & volatility | | | | | |	|
+| Normal, CAPM & const volatility | | | | | | |
+| t, CAPM & const volatility | | | | | | |
+| Normal, const drift & GARCH	| | | | | |	|
+| t, const drift & GARCH | | | | | | |
+| Normal, CAPM & GARCH | | | | | | |
+| t, CAPM & GARCH	| | | | | |	|
 
 
 ## Discussion
