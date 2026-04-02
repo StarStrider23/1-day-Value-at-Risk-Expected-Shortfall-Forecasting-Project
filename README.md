@@ -35,29 +35,30 @@ Results are averaged across 10 simulation runs to reduce Monte Carlo variability
 
 Historical VaR = -0.0438
 
-| Model | Mean ES | Mean VaR% | Median | Standard deviation | Min | Max |
-|---|---|---|---|---|---|---|
-| Normal, const drift & volatility |  | | | | |	|
-| t, const drift & volatility | | | | | |	|
-| Normal, CAPM & const volatility | | | | | | |
-| t, CAPM & const volatility | | | | | | |
-| Normal, const drift & GARCH	| | | | | |	|
-| t, const drift & GARCH | | | | | | |
-| Normal, CAPM & GARCH | | | | | | |
-| t, CAPM & GARCH	| | | | | |	|
+| Model                                            | VaR Mean | VaR % Mean | VaR Median | VaR Min | VaR Max | VaR Std |
+| ------------------------------------------------ | -------- | ---------- | ---------- | ------- | ------- | ------- |
+| Normal, Constant drift, Constant volatility      | -0.0389  | 11.2       | -0.0391    | -0.0400 | -0.0378 | 0.0007  |
+| Student's t, Constant drift, Constant volatility | -0.0442  | 2.7        | -0.0437    | -0.0465 | -0.0426 | 0.0014  |
+| Normal, CAPM, Constant volatility                | -0.0386  | 11.8       | -0.0387    | -0.0400 | -0.0372 | 0.0008  |
+| Student's t, CAPM, Constant volatility           | -0.0442  | 2.7        | -0.0437    | -0.0472 | -0.0420 | 0.0015  |
+| Normal, Constant drift, GARCH(1,1)               | -0.0410  | 6.4        | -0.0409    | -0.0418 | -0.0404 | 0.0004  |
+| Student's t, Constant drift, GARCH(1,1)          | -0.0464  | 6.0        | -0.0466    | -0.0498 | -0.0438 | 0.0018  |
+| Normal, CAPM, GARCH(1,1)                         | -0.0414  | 5.5        | -0.0413    | -0.0427 | -0.0401 | 0.0008  |
+| Student's t, CAPM, GARCH(1,1)                    | -0.0454  | 3.9        | -0.0454    | -0.0480 | -0.0433 | 0.0011  |
 
 Historical ES = -0.0593
 
-| Model | Mean | Mean ES% | Median | Standard deviation | Min | Max |
-|---|---|---|---|---|---|---|
-| Normal, const drift & volatility |  | | | | |	|
-| t, const drift & volatility | | | | | |	|
-| Normal, CAPM & const volatility | | | | | | |
-| t, CAPM & const volatility | | | | | | |
-| Normal, const drift & GARCH	| | | | | |	|
-| t, const drift & GARCH | | | | | | |
-| Normal, CAPM & GARCH | | | | | | |
-| t, CAPM & GARCH	| | | | | |	|
+| Model                                            | ES Mean | ES % Mean | ES Median | ES Min  | ES Max  | ES Std |
+| ------------------------------------------------ | ------- | --------- | --------- | ------- | ------- | ------ |
+| Normal, Constant drift, Constant volatility      | -0.0447 | 24.7      | -0.0449   | -0.0458 | -0.0433 | 0.0008 |
+| Student's t, Constant drift, Constant volatility | -0.0597 | 3.5       | -0.0597   | -0.0632 | -0.0561 | 0.0024 |
+| Normal, CAPM, Constant volatility                | -0.0441 | 25.7      | -0.0443   | -0.0452 | -0.0421 | 0.0011 |
+| Student's t, CAPM, Constant volatility           | -0.0603 | 3.8       | -0.0598   | -0.0666 | -0.0537 | 0.0031 |
+| Normal, Constant drift, GARCH(1,1)               | -0.0471 | 20.6      | -0.0472   | -0.0479 | -0.0463 | 0.0005 |
+| Student's t, Constant drift, GARCH(1,1)          | -0.0621 | 5.1       | -0.0622   | -0.0660 | -0.0582 | 0.0022 |
+| Normal, CAPM, GARCH(1,1)                         | -0.0469 | 20.9      | -0.0470   | -0.0483 | -0.0454 | 0.0010 |
+| Student's t, CAPM, GARCH(1,1)                    | -0.0610 | 3.7       | -0.0609   | -0.0649 | -0.0584 | 0.0023 |
+
 
 All models produced 7/1000 violations. The Kupiec and Christoffersen tests yielded 1.001 and 0.0989 respectively.
 
