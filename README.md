@@ -51,16 +51,18 @@ All models produced 7/1000 violations. The Kupiec and Christoffersen tests yield
 
 Historical VaR = -0.0417, historical ES = -0.0491
 
-| Model | VaR	| VaR % diff  |	ES  |	ES % diff |
-|---|---|---|---|---|
-|Normal, const drift & volatility | -0.0347 |	16.9% |	-0.0401 |	18.2% |
-|Student-t, const drift & volatility |	-0.0543 |	30.0%	| -0.0690 |	40.6% |
-|Normal, CAPM & const volatility |	-0.0357 |	14.4% |	-0.0406 |	17.3% |
-|t, CAPM & const volatility |	-0.0562 |	34.7% |	-0.0782 |	59.2% |
-|Normal, const drift & GARCH |	-0.0356 |	14.6% |	-0.0406 |	17.3% |
-|t, const drift & GARCH |	-0.0556 |	33.3% |	-0.0764 |	55.7% |
-|Normal, CAPM & GARCH |	-0.0352 |	15.8%	| -0.0410 |	16.4% |
-|t, CAPM & GARCH |	-0.0564 |	35.2% |	-0.0750 |	52.7% |
+|---| Run 1 | Run 1 | Run 1 | Run 1 | Run 2 | Run 2 |Run 2 |Run 2 | Run 3 | Run 3 | Run 3 | Run 3 | 
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Model | VaR	| VaR % diff |	ES  |	ES % diff | VaR	| VaR % diff |	ES  |	ES % diff | VaR	| VaR % diff |	ES  |	ES % diff |
+|Normal, const drift & volatility | -0.0347 |	16.9% |	-0.0401 |	18.2% |  -0.0359 | 14.0% | -0.0411 | 16.2% | -0.0353 | 15.4% | -0.0398 | 18.9% |
+|Student-t, const drift & volatility |	-0.0543 |	30.0%	| -0.0690 |	40.6% | -0.0553 | 32.7% | -0.0736 | 49.9% | -0.0530 | 26.9% | -0.0709 | 44.5% |
+|Normal, CAPM & const volatility |	-0.0357 |	14.4% |	-0.0406 |	17.3% |  -0.0348 | 16.7% | -0.0396 | 19.3% | -0.0350 | 16.2% | -0.0397 | 19.1% |
+|t, CAPM & const volatility |	-0.0562 |	34.7% |	-0.0782 |	59.2% | -0.0555 | 33.0% | -0.0702 | 42.9% | -0.0575 | 37.7% | -0.0800 | 63.0% |
+|Normal, const drift & GARCH |	-0.0356 |	14.6% |	-0.0406 |	17.3% |  -0.0353 | 15.3% | -0.0408 | 16.8% | -0.0360 | 13.7% | -0.0413 | 15.9% |
+|t, const drift & GARCH |	-0.0556 |	33.3% |	-0.0764 |	55.7% | -0.0556 | 33.2% | -0.0741 | 50.9% | -0.0520 | 24.8% | -0.0738 | 50.3% |
+|Normal, CAPM & GARCH |	-0.0352 |	15.8%	| -0.0410 |	16.4% | -0.0360 | 13.6% | -0.0404 | 17.8% | -0.0350 | 16.0% | -0.0403 | 18.0% |
+|t, CAPM & GARCH |	-0.0564 |	35.2% |	-0.0750 |	52.7% | -0.0566 | 35.8% | -0.0826 | 68.3% | -0.0574 | 37.5% | -0.0782 | 59.3% |
+
 
 ## Discussion
 
