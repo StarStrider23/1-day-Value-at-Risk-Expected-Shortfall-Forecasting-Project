@@ -89,7 +89,7 @@ for keys_vol, values_vol in vol.items():
         for keys_dist, values_dist in dist.items():
             results_p1 = var_es_comparison(data, market_data, rf_data, 
                                 sample_days, values_dist, values_drift, values_vol, 
-                                backtesting=True, tests=True, steps=1, n_sim=100000)
+                                backtesting=True, tests=True, steps=1, n_sim=10000)
             print(f"The results for the model with {keys_dist}, {keys_drift} and {keys_vol} are: {results_p1}")
             print()
 
