@@ -33,16 +33,17 @@ The files with the distributions, drift and volatility models are located in the
 
 Historical VaR = -0.0438, historical ES = -0.0593
 
-| Model | VaR	| VaR % diff |	ES  |	ES % diff |
-|---|---|---|---|---|
-| Normal, const drift & volatility | -0.0396 | 9.6% |	-0.0451 | 23.9% |
-| t, const drift & volatility | -0.0425 | 3.0% | -0.0571  |	3.8% |
-| Normal, CAPM & const volatility |	-0.0391 |	10.7% |	-0.0450 |	24.1% |
-| t, CAPM & const volatility | -0.0444 | 1.4%	| -0.0617 |	4.0% |
-| Normal, const drift & GARCH	| -0.0406 |	7.3% |	-0.0464 |	21.8% |
-| t, const drift & GARCH | -0.0464 |	5.9% |	-0.0613 |	3.3% |
-| Normal, CAPM & GARCH | -0.0404 |	7.8% |	-0.0459 |	22.2% |
-| t, CAPM & GARCH	| -0.0473 |	8.1% | -0.0624 | 5.2% |
+|---| Run 1 | Run 2 | Run 3 | 
+| Model | VaR	| VaR % diff |	ES  |	ES % diff | VaR	| VaR % diff |	ES  |	ES % diff | VaR	| VaR % diff |	ES  |	ES % diff |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Normal, const drift & volatility | -0.0396 | 9.6% |	-0.0451 | 23.9% | -0.03903 | 10.87%	| -0.04472 | 24.65% |	-0.03948 |	9.85%	-0.04539 |	23.52% |
+| t, const drift & volatility | -0.0425 | 3.0% | -0.0571  |	3.8% | -0.04223 |	3.56% |	-0.05747 |	3.17%	| -0.04362 | 0.40% | -0.05729	3.46% |
+| Normal, CAPM & const volatility |	-0.0391 |	10.7% |	-0.0450 |	24.1% | -0.03784 |	13.58% |	-0.04342 |	26.83% |	-0.03840 |	12.31%	| -0.04362 |	26.50% |
+| t, CAPM & const volatility | -0.0444 | 1.4%	| -0.0617 |	4.0% | -0.04333 |	1.05% |	-0.06179 |	4.11% |	-0.04558 |	4.08% |	-0.06532 |	10.07% |
+| Normal, const drift & GARCH	| -0.0406 |	7.3% |	-0.0464 |	21.8% | -0.04069 |	7.08%	 |-0.04591 |	22.65% |	-0.04084 |	6.74%	 |-0.04634 |	21.92% |
+| t, const drift & GARCH | -0.0464 |	5.9% |	-0.0613 |	3.3% | -0.04875 |	11.32% |	-0.06267 |	5.59% |	-0.04668 |	6.60% |	-0.06330 |	6.65% |
+| Normal, CAPM & GARCH | -0.0404 |	7.8% |	-0.0459 |	22.2% | -0.04089 |	6.62% |	-0.04666 |	21.38% |	-0.04019 |	8.23% |	-0.04557 |	23.22% |
+| t, CAPM & GARCH	| -0.0473 |	8.1% | -0.0624 | 5.2% | -0.04732 |	8.05% |	-0.06660 |	12.23% |	-0.04418 |	0.89% |	-0.05799 |
 
 All models produced 7/1000 violations. The Kupiec and Christoffersen tests yielded 1.001 and 0.0989 respectively.
 
