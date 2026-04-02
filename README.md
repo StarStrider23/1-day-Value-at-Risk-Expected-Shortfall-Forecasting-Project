@@ -34,6 +34,7 @@ The files with the distributions, drift and volatility models are located in the
 Historical VaR = -0.0438, historical ES = -0.0593
 
 |---| Run 1 | Run 2 | Run 3 | 
+|---|---|---|---|
 | Model | VaR	| VaR % diff |	ES  |	ES % diff | VaR	| VaR % diff |	ES  |	ES % diff | VaR	| VaR % diff |	ES  |	ES % diff |
 | Normal, const drift & volatility | -0.0396 | 9.6% |	-0.0451 | 23.9% | -0.03903 | 10.87%	| -0.04472 | 24.65% |	-0.03948 |	9.85% |	-0.04539 |	23.52% |
 | t, const drift & volatility | -0.0425 | 3.0% | -0.0571  |	3.8% | -0.04223 |	3.56% |	-0.05747 |	3.17%	| -0.04362 | 0.40% | -0.05729	3.46% |
