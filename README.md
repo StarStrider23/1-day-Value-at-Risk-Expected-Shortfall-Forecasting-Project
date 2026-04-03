@@ -60,6 +60,8 @@ Historical ES = -0.0593
 | Student's t, CAPM, GARCH(1,1)                    | -0.0623 | 6.17      | -0.0613   | -0.0700 | -0.0568 | 0.0041 |
 
 <img width="1200" height="600" alt="Figure_1" src="https://github.com/user-attachments/assets/c8d067ec-bf9e-4868-9a29-5b2fa020bb6a" />
+(Note: For ease of visual interpretation, VaR and ES are plotted in absolute terms (i.e., reported as positive values), although they represent potential losses.)
+
 
 All models produced 7/1000 violations. The Kupiec and Christoffersen tests yielded 1.001 and 0.0989 respectively.
 
@@ -92,6 +94,8 @@ Historical ES = -0.0491
 | Student's t, CAPM, GARCH(1,1)                    | -0.0621 | 5.21      | -0.0620   | -0.0659 | -0.0579 | 0.0025 |
 
 <img width="1200" height="600" alt="Figure_2" src="https://github.com/user-attachments/assets/d77459f3-523d-46f9-afde-0d9b138788c9" />
+(Note: For ease of visual interpretation, VaR and ES are plotted in absolute terms (i.e., reported as positive values), although they represent potential losses.)
+
 
 ## Discussion
 
