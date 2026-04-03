@@ -33,6 +33,8 @@ Results are averaged across 10 simulation runs to reduce Monte Carlo variability
 
 ### Single-asset (MSFT)
 
+All models produced 7/1000 violations. The Kupiec and Christoffersen tests yielded 1.001 and 0.0989 respectively.  
+
 Historical VaR = -0.0438
 
 | Model                                            | VaR Mean | VaR % Mean | VaR Median | VaR Min | VaR Max | VaR Std |
@@ -61,9 +63,6 @@ Historical ES = -0.0593
 
 <img width="1200" height="600" alt="Figure_1" src="https://github.com/user-attachments/assets/c8d067ec-bf9e-4868-9a29-5b2fa020bb6a" />
 (Note: For ease of visual interpretation, VaR and ES are plotted in absolute terms (i.e., reported as positive values), although they represent potential losses.)
-
-
-All models produced 7/1000 violations. The Kupiec and Christoffersen tests yielded 1.001 and 0.0989 respectively.
 
 ### Multi-asset (MSFT, AAPL and GOOGL)
 
