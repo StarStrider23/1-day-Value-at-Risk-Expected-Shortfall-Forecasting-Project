@@ -35,7 +35,7 @@ Results are averaged across 10 simulation runs to reduce Monte Carlo variability
 
 All models produced 7/1000 violations. The Kupiec and Christoffersen tests yielded 1.001 and 0.0989 respectively.  
 
-Historical VaR = -0.0438
+Historical VaR = -0.0438  
 
 | Model                                            | VaR Mean | VaR % Mean | VaR Median | VaR Min | VaR Max | VaR Std |
 | ------------------------------------------------ | -------- | ---------- | ---------- | ------- | ------- | ------- |
@@ -47,8 +47,8 @@ Historical VaR = -0.0438
 | Student's t, Constant drift, GARCH(1,1)          | -0.0459  | 5.35       | -0.0460    | -0.0474 | -0.0427 | 0.0014  |
 | Normal, CAPM, GARCH(1,1)                         | -0.0407  | 7.10       | -0.0406    | -0.0417 | -0.0398 | 0.0006  |
 | Student's t, CAPM, GARCH(1,1)                    | -0.0455  | 4.73       | -0.0456    | -0.0484 | -0.0423 | 0.0018  |
-
-Historical ES = -0.0593
+  
+Historical ES = -0.0593  
 
 | Model                                            | ES Mean | ES % Mean | ES Median | ES Min  | ES Max  | ES Std |
 | ------------------------------------------------ | ------- | --------- | --------- | ------- | ------- | ------ |
@@ -60,13 +60,13 @@ Historical ES = -0.0593
 | Student's t, Constant drift, GARCH(1,1)          | -0.0620 | 5.62      | -0.0625   | -0.0683 | -0.0559 | 0.0032 |
 | Normal, CAPM, GARCH(1,1)                         | -0.0462 | 22.09     | -0.0461   | -0.0476 | -0.0453 | 0.0006 |
 | Student's t, CAPM, GARCH(1,1)                    | -0.0623 | 6.17      | -0.0613   | -0.0700 | -0.0568 | 0.0041 |
-
+  
 <img width="1200" height="600" alt="Figure_1" src="https://github.com/user-attachments/assets/c8d067ec-bf9e-4868-9a29-5b2fa020bb6a" />
 (Note: For ease of visual interpretation, VaR and ES are plotted in absolute terms (i.e., reported as positive values), although they represent potential losses.)
 
 ### Multi-asset (MSFT, AAPL and GOOGL)
 
-Historical VaR = -0.0417
+Historical VaR = -0.0417  
 
 | Model                                            | VaR Mean | VaR % Mean | VaR Median | VaR Min | VaR Max | VaR Std |
 | ------------------------------------------------ | -------- | ---------- | ---------- | ------- | ------- | ------- |
@@ -78,8 +78,8 @@ Historical VaR = -0.0417
 | Student's t, Constant drift, GARCH(1,1)          | -0.0463  | 6.47       | -0.0472    | -0.0482 | -0.0426 | 0.0019  |
 | Normal, CAPM, GARCH(1,1)                         | -0.0407  | 6.94       | -0.0408    | -0.0421 | -0.0397 | 0.0007  |
 | Student's t, CAPM, GARCH(1,1)                    | -0.0456  | 4.28       | -0.0454    | -0.0479 | -0.0439 | 0.0013  |
-
-Historical ES = -0.0491
+  
+Historical ES = -0.0491  
 
 | Model                                            | ES Mean | ES % Mean | ES Median | ES Min  | ES Max  | ES Std |
 | ------------------------------------------------ | ------- | --------- | --------- | ------- | ------- | ------ |
@@ -91,7 +91,7 @@ Historical ES = -0.0491
 | Student's t, Constant drift, GARCH(1,1)          | -0.0626 | 6.34      | -0.0625   | -0.0687 | -0.0578 | 0.0033 |
 | Normal, CAPM, GARCH(1,1)                         | -0.0464 | 21.84     | -0.0463   | -0.0483 | -0.0451 | 0.0009 |
 | Student's t, CAPM, GARCH(1,1)                    | -0.0621 | 5.21      | -0.0620   | -0.0659 | -0.0579 | 0.0025 |
-
+  
 <img width="1200" height="600" alt="Figure_2" src="https://github.com/user-attachments/assets/d77459f3-523d-46f9-afde-0d9b138788c9" />
 (Note: For ease of visual interpretation, VaR and ES are plotted in absolute terms (i.e., reported as positive values), although they represent potential losses.)
 
