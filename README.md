@@ -111,6 +111,8 @@ Overall, the findings emphasize that model selection should consider both the ag
 
 ## Model ranking
 
+With that being said, let's rank the models based on their precision. The proposed way to rank the models is 
+
 ## Outlook
 
 This project focuses on 1-day ahead risk forecasting, but the framework can be naturally extended to multi-day (n-day) VaR and Expected Shortfall.
