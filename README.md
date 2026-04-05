@@ -117,6 +117,8 @@ Score = |VaR % error| + |ES % error|
   
 Models are then ranked according to this score, with lower values indicating better overall performance.
 
+Single Asset                                                           Multiple Asset
+
 ## Outlook
 
 This project focuses on 1-day ahead risk forecasting, but the framework can be naturally extended to multi-day (n-day) VaR and Expected Shortfall.
