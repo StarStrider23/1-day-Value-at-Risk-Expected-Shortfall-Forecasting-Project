@@ -70,29 +70,29 @@ Historical VaR = -0.0417
 
 | Model                                            | VaR Mean | VaR % Mean | VaR Median | VaR Min | VaR Max | VaR Std |
 | ------------------------------------------------ | -------- | ---------- | ---------- | ------- | ------- | ------- |
-| Normal, Constant drift, Constant volatility      | -0.0391  | 10.74      | -0.0391    | -0.0398 | -0.0384 | 0.0004  |
-| Student's t, Constant drift, Constant volatility | -0.0441  | 1.69       | -0.0442    | -0.0457 | -0.0428 | 0.0008  |
-| Normal, CAPM, Constant volatility                | -0.0390  | 10.90      | -0.0390    | -0.0397 | -0.0381 | 0.0004  |
-| Student's t, CAPM, Constant volatility           | -0.0440  | 2.01       | -0.0436    | -0.0471 | -0.0429 | 0.0013  |
-| Normal, Constant drift, GARCH(1,1)               | -0.0407  | 6.93       | -0.0408    | -0.0418 | -0.0397 | 0.0007  |
-| Student's t, Constant drift, GARCH(1,1)          | -0.0463  | 6.47       | -0.0472    | -0.0482 | -0.0426 | 0.0019  |
-| Normal, CAPM, GARCH(1,1)                         | -0.0407  | 6.94       | -0.0408    | -0.0421 | -0.0397 | 0.0007  |
-| Student's t, CAPM, GARCH(1,1)                    | -0.0456  | 4.28       | -0.0454    | -0.0479 | -0.0439 | 0.0013  |
+| Normal, Constant drift, Constant volatility      | -0.0355  | 14.82      | -0.0356    | -0.0360 | -0.0349 | 0.0003  |
+| Student's t, Constant drift, Constant volatility | -0.0563  | 34.94      | -0.0565    | -0.0590 | -0.0531 | 0.0016  |
+| Normal, CAPM, Constant volatility                | -0.0350  | 15.99      | -0.0349    | -0.0364 | -0.0345 | 0.0005  |
+| Student's t, CAPM, Constant volatility           | -0.0558  | 33.71      | -0.0558    | -0.0575 | -0.0542 | 0.0010  |
+| Normal, Constant drift, GARCH(1,1)               | -0.0354  | 15.13      | -0.0357    | -0.0365 | -0.0340 | 0.0008  |
+| Student's t, Constant drift, GARCH(1,1)          | -0.0568  | 36.26      | -0.0573    | -0.0588 | -0.0541 | 0.0016  |
+| Normal, CAPM, GARCH(1,1)                         | -0.0352  | 15.59      | -0.0353    | -0.0359 | -0.0344 | 0.0005  |
+| Student's t, CAPM, GARCH(1,1)                    | -0.0560  | 34.33      | -0.0559    | -0.0595 | -0.0533 | 0.0019  |
   
 Historical ES = -0.0491  
 
-| Model                                            | ES Mean | ES % Mean | ES Median | ES Min  | ES Max  | ES Std |
-| ------------------------------------------------ | ------- | --------- | --------- | ------- | ------- | ------ |
-| Normal, Constant drift, Constant volatility      | -0.0445 | 24.99     | -0.0447   | -0.0459 | -0.0433 | 0.0009 |
-| Student's t, Constant drift, Constant volatility | -0.0613 | 4.33      | -0.0607   | -0.0670 | -0.0578 | 0.0030 |
-| Normal, CAPM, Constant volatility                | -0.0447 | 24.67     | -0.0445   | -0.0463 | -0.0430 | 0.0009 |
-| Student's t, CAPM, Constant volatility           | -0.0591 | 3.05      | -0.0589   | -0.0624 | -0.0558 | 0.0021 |
-| Normal, Constant drift, GARCH(1,1)               | -0.0466 | 21.40     | -0.0466   | -0.0481 | -0.0453 | 0.0008 |
-| Student's t, Constant drift, GARCH(1,1)          | -0.0626 | 6.34      | -0.0625   | -0.0687 | -0.0578 | 0.0033 |
-| Normal, CAPM, GARCH(1,1)                         | -0.0464 | 21.84     | -0.0463   | -0.0483 | -0.0451 | 0.0009 |
-| Student's t, CAPM, GARCH(1,1)                    | -0.0621 | 5.21      | -0.0620   | -0.0659 | -0.0579 | 0.0025 |
+| Model                                            | ES Mean  | ES % Mean | ES Median | ES Min  | ES Max  | ES Std  |
+| ------------------------------------------------ | -------- | --------- | --------- | ------- | ------- | ------- |
+| Normal, Constant drift, Constant volatility      | -0.0407  | 17.18     | -0.0406   | -0.0412 | -0.0402 | 0.0004  |
+| Student's t, Constant drift, Constant volatility | -0.0757  | 54.19     | -0.0766   | -0.0788 | -0.0702 | 0.0030  |
+| Normal, CAPM, Constant volatility                | -0.0403  | 17.87     | -0.0403   | -0.0415 | -0.0393 | 0.0007  |
+| Student's t, CAPM, Constant volatility           | -0.0768  | 56.53     | -0.0762   | -0.0815 | -0.0738 | 0.0025  |
+| Normal, Constant drift, GARCH(1,1)               | -0.0403  | 17.96     | -0.0405   | -0.0419 | -0.0390 | 0.0009  |
+| Student's t, Constant drift, GARCH(1,1)          | -0.0765  | 55.83     | -0.0772   | -0.0810 | -0.0721 | 0.0026  |
+| Normal, CAPM, GARCH(1,1)                         | -0.0406  | 17.40     | -0.0404   | -0.0416 | -0.0394 | 0.0006  |
+| Student's t, CAPM, GARCH(1,1)                    | -0.0759  | 54.58     | -0.0750   | -0.0807 | -0.0726 | 0.0026  |
   
-<img width="1200" height="600" alt="Figure_2" src="https://github.com/user-attachments/assets/d77459f3-523d-46f9-afde-0d9b138788c9" />
+<img width="1200" height="600" alt="Figure_2" src="https://github.com/user-attachments/assets/724c5f94-c410-4670-a160-84687b0eba63" />
 (Note: For ease of visual interpretation, VaR and ES are plotted in absolute terms (i.e., reported as positive values), although they represent potential losses.)
 
 
