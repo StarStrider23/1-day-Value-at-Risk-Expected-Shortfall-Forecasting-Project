@@ -109,6 +109,8 @@ The backtesting results for the single asset indicate that all models produce an
 Finally, running multiple simulations enables the computation of summary statistics such as mean, standard deviation, and minimum/maximum values for both VaR and ES. These aggregated metrics provide a more robust picture of model performance than single-run results, mitigating the effects of sampling variability and highlighting differences between models in a statistically meaningful way.
 Overall, the findings emphasize that model selection should consider both the aggregation level and the specific risk measure of interest. Heavy-tailed distributions are essential for accurately modeling individual asset risk, while simpler normal-based models may be preferable for diversified portfolios where extreme risks are naturally mitigated. Multi-run summary statistics further enhance the reliability and interpretability of the results, supporting informed decision-making in risk management.
 
+## Model ranking
+
 ## Outlook
 
 This project focuses on 1-day ahead risk forecasting, but the framework can be naturally extended to multi-day (n-day) VaR and Expected Shortfall.
