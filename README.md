@@ -21,7 +21,7 @@ While the single-asset portfolio included only one share of MSFT, for the multi-
 
 Finally, model performance is evaluated through backtesting on the single-asset case. The Kupiec test is used to assess whether the frequency of VaR violations matches the expected confidence level, while the Christoffersen test evaluates whether violations occur independently over time, i.e., without clustering.
 
-It should also be mentioned that the dataset spaned approximately four years of daily observations, of which the last 1000 days were used for backtesting.
+It should also be mentioned that the dataset spaned approximately four years of daily observations (2022-01-01 to 2026-03-31), of which the last 1000 trading days were used for backtesting.
 
 ## Structure
 
