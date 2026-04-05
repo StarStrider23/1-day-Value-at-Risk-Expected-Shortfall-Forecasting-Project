@@ -144,6 +144,8 @@ However, in practice, greater emphasis is typically placed on Expected Shortfall
 | 6    | Student's t, Constant drift, Constant volatility | 34.94 | 54.19 | 89.13 |
 | 7    | Student's t, CAPM, Constant volatility           | 33.71 | 56.53 | 90.24 |
 | 8    | Student's t, Constant drift, GARCH(1,1)          | 36.26 | 55.83 | 92.09 |  
+
+### Side comment
   
 However, one thing should be added. In cases where differences in performance are marginal, there is little justification for favoring more complex models. According to the principle of parsimony, simpler models are generally preferable, as they achieve similar predictive accuracy with fewer assumptions, reduced estimation uncertainty, and lower computional and implementation effort.
 
