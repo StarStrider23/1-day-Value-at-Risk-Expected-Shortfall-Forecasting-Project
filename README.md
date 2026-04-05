@@ -115,9 +115,37 @@ With that being said, let's rank the models based on their precision. The propos
 
 Score = |VaR % error| + |ES % error|  
   
-Models are then ranked according to this score, with lower values indicating better overall performance.  
+Models are then ranked according to this score, with lower values indicating better overall performance. This approach avoids the need to impose arbitrary weighting schemes on VaR and ES, ensuring that the ranking remains transparent and reproducible.  
 
-Single Asset &nbsp Multiple Asset
+However, in practice, greater emphasis is typically placed on Expected Shortfall, as it captures tail risk beyond the VaR threshold and is preferred in regulatory frameworks such as Basel III. However, assigning an exact relative weight between VaR and ES is inherently subjective and difficult to justify empirically. To assess the sensitivity of the results, alternative specifications with higher weight assigned to ES were considered. These adjustments did not materially affect the ranking of models, suggesting that the conclusions are robust to reasonable variations in weighting.  
+
+### Single-asset 
+
+| Rank | Model                                            | VaR % | ES %  | Score |
+|------|--------------------------------------------------|-------|-------|-------|
+| 1    | Student's t, Constant drift, Constant volatility | 1.68  | 3.49  | 5.17  |
+| 2    | Student's t, CAPM, Constant volatility           | 2.67  | 3.27  | 5.94  |
+| 3    | Student's t, CAPM, GARCH(1,1)                    | 4.73  | 6.17  | 10.90 |
+| 4    | Student's t, Constant drift, GARCH(1,1)          | 5.35  | 5.62  | 10.97 |
+| 5    | Normal, CAPM, GARCH(1,1)                         | 7.10  | 22.09 | 29.19 |
+| 6    | Normal, Constant drift, GARCH(1,1)               | 7.31  | 22.03 | 29.34 |      
+| 7    | Normal, Constant drift, Constant volatility      | 10.54 | 24.21 | 34.75 |
+| 8    | Normal, CAPM, Constant volatility                | 10.98 | 24.47 | 35.45 |
+
+### Multi-asset
+
+| Rank | Model                                            | VaR % | ES %  | Score |
+|------|--------------------------------------------------|-------|-------|-------|
+| 1    | Normal, Constant drift, Constant volatility      | 14.82 | 17.18 | 32.00 |
+| 2    | Normal, CAPM, GARCH(1,1)                         | 15.59 | 17.40 | 32.99 |
+| 3    | Normal, Constant drift, GARCH(1,1)               | 15.13 | 17.96 | 33.09 |
+| 4    | Normal, CAPM, Constant volatility                | 15.99 | 17.87 | 33.86 |
+| 5    | Student's t, CAPM, GARCH(1,1)                    | 34.33 | 54.58 | 88.91 |
+| 6    | Student's t, Constant drift, Constant volatility | 34.94 | 54.19 | 89.13 |
+| 7    | Student's t, CAPM, Constant volatility           | 33.71 | 56.53 | 90.24 |
+| 8    | Student's t, Constant drift, GARCH(1,1)          | 36.26 | 55.83 | 92.09 |  
+  
+However, one thing should be added. In cases where differences in performance are marginal, there is little justification for favoring more complex models. According to the principle of parsimony, simpler models are generally preferable, as they achieve similar predictive accuracy with fewer assumptions, reduced estimation uncertainty, and lower computional and implementation effort.
 
 ## Outlook
 
