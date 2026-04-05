@@ -111,7 +111,11 @@ Overall, the findings emphasize that model selection should consider both the ag
 
 ## Model ranking
 
-With that being said, let's rank the models based on their precision. The proposed way to rank the models is 
+With that being said, let's rank the models based on their precision. The proposed way to rank the models is according to a simple aggregate error measure which is constructed based on the percentual deviation of model-implied risk measures from their historical counterparts. Specifically, for each model, the absolute percetage deviation of VaR and ES are summed:  
+
+Score = |VaR % error| + |ES % error|  
+  
+Models are then ranked according to this score, with lower values indicating better overall performance.
 
 ## Outlook
 
