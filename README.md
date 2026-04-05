@@ -115,9 +115,9 @@ With that being said, let's rank the models based on their precision. The propos
 
 Score = |VaR % error| + |ES % error|  
   
-Models are then ranked according to this score, with lower values indicating better overall performance.
+Models are then ranked according to this score, with lower values indicating better overall performance.  
 
-Single Asset                                                           Multiple Asset
+Single Asset                                                                                   Multiple Asset
 
 ## Outlook
 
