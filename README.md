@@ -147,7 +147,7 @@ However, in practice, greater emphasis is typically placed on Expected Shortfall
 
 ### Side comment
   
-However, one thing should be added. In cases where differences in performance are marginal, there is little justification for favoring more complex models. According to the principle of parsimony, simpler models are generally preferable, as they achieve similar predictive accuracy with fewer assumptions, reduced estimation uncertainty, and lower computional and implementation effort.
+However, one thing should be added. In cases where differences in performance are marginal, there is little justification for favoring more complex models. According to the principle of parsimony, simpler models are generally preferable, as they achieve similar predictive accuracy with fewer assumptions, reduced estimation uncertainty and lower computional and implementation effort.
 
 ## Outlook
 
