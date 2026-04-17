@@ -1,4 +1,4 @@
-# 1-day Value-at-Risk & Expected Shortfall Forecasting Project
+# 1-day Value-at-Risk & Expected Shortfall Forecasting
 
 Project by Alexsey Chernichenko
 
