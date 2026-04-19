@@ -33,7 +33,7 @@ The Student’s t-distribution is widely used for statistical inference when dea
 
 $$ t = (\overline{X_{n}} - \mu) \frac{\sqrt{n}}{\sigma_{n}} $$
 
-where $\overline{X_{n}}$ is the sample mean of size $n$, $\sigma_{n}$ is the sample standard deviation and $\mu$ is the population mean. The shape of the distribution depends on the degrees of freedom $\nu := (n−1)$ and it converges to the normal distribution as the sample size increases, i.e. $\nu \rightarrow \inf$. It is commonly applied in hypothesis testing and confidence interval estimation.
+where $\overline{X_{n}}$ is the sample mean of size $n$, $\sigma_{n}$ is the sample standard deviation and $\mu$ is the population mean. The shape of the distribution depends on the degrees of freedom $\nu := (n−1)$ and it converges to the normal distribution as the sample size increases, i.e. $\nu \rightarrow \infinity $. It is commonly applied in hypothesis testing and confidence interval estimation.
 
 ## Structure
 
