@@ -31,9 +31,9 @@ Since the project involves a number of advanced financial models,
 
 The Student’s t-distribution is widely used for statistical inference when dealing with small sample sizes and unknown population variance. Unlike the normal distribution, it has heavier tails, which makes it more robust to extreme observations. The t-statistic is defined as:
 
-$$ t = (\bar{X}_{n} - \mu) \frac{\sqrt{n}}{\sigma_{n}} $$
+$$ t = (\overline{X}_{n} - \mu) \frac{\sqrt{n}}{\sigma_{n}} $$
 
-where $\bar{X}_{n}$ is the sample mean of size $n$, $\sigma_{n}$ is the sample standard deviation and $\mu$ is the population mean. The shape of the distribution depends on the degrees of freedom $\nu := (n−1)$ and it converges to the normal distribution as the sample size increases, i.e. $$. It is commonly applied in hypothesis testing and confidence interval estimation.
+where $\overline{X}_{n}$ is the sample mean of size $n$, $\sigma_{n}$ is the sample standard deviation and $\mu$ is the population mean. The shape of the distribution depends on the degrees of freedom $\nu := (n−1)$ and it converges to the normal distribution as the sample size increases, i.e. $\nu \rightarrow \inf$. It is commonly applied in hypothesis testing and confidence interval estimation.
 
 ## Structure
 
