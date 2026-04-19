@@ -49,7 +49,7 @@ GARCH(1,1) is one of the simplest and most commonly used specifications within t
 
 $$ \sigma^2_{t} = \omega + \alpha \epsilon^2_{t-1} + \beta \sigma^2_{t-1} $$
  
-where $\sigma^2_{t}$ is the conditional variance at time $t$ and $\epsilon^2_{t-1}$ represents shocks at time $t-1$. The parameter $\alpha$ measures how strongly recent shocks $\epsilon_{t-1}$ affect current volatility. Then, $\beta$ is the parameter that captures how much of the previous period’s variance carries over into the current period. $\alpha$ and $\beta$ are usually referred to as reaction to shocks and persistence of volatility resepctively. Finally, $\omega$ provides the specific mathematical foundation that ensures positive volatility in all market conditions. 
+where $\sigma^2_{t}$ is the conditional variance at time $t$ and $\epsilon^2_{t-1}$ represents shocks at time $t-1$. The parameter $\alpha$ measures how strongly recent shocks affect current volatility. Then, $\beta$ is the parameter that captures how much of the previous period’s variance carries over into the current period. $\alpha$ and $\beta$ are usually referred to as reaction to shocks and persistence of volatility resepctively. Finally, $\omega$ provides the specific mathematical foundation that ensures positive volatility in all market conditions. 
 
 ### Cholesky decomposition
 
