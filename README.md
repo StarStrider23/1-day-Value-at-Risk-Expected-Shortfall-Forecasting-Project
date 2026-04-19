@@ -25,7 +25,7 @@ It should also be mentioned that the dataset spaned approximately four years of 
 
 ## Background
 
-Since the project involves a number of advanced financial models, 
+Since the project incorporates several advanced financial models (t-distribution, GARCH, CAPM and Cholesky decomposition), it is necessary to briefly explain the ideas behind them as well as their mathematical structures in order to ensure clarity. However, there are also a number of concepts (normal distribution, constant drift and constant volatiltiy, Monte Carlo simulation) that are really basic and self-explanatory, and thus don't require any additional explanations.
 
 ### Student's t-distribution
 
@@ -33,15 +33,37 @@ The Student’s t-distribution is widely used for statistical inference when dea
 
 $$ t = (\overline{X_{n}} - \mu) \frac{\sqrt{n}}{\sigma_{n}} $$
 
-where $\overline{X_{n}}$ is the sample mean of size $n$, $\sigma_{n}$ is the sample standard deviation and $\mu$ is the population mean. The shape of the distribution depends on the degrees of freedom $\nu := (n−1)$ and it converges to the normal distribution as the sample size increases, i.e. $\nu \rightarrow \infty $. It is commonly applied in hypothesis testing and confidence interval estimation.
+where $\overline{X_{n}}$ is the sample mean of size $n$, $\sigma_{n}$ is the sample standard deviation and $\mu$ is the population mean. The shape of the distribution depends on the degrees of freedom $\nu := (n−1)$ and it converges to the normal distribution as the sample size increases, i.e. $\nu \rightarrow \infty $.
 
-### Capital Asset Pricibng Model (CAPM)
+### CAPM (Capital Asset Pricing Model)
 
 CAPM provides a theoretical framework for determining the expected return of an asset based on its exposure to systematic market risk. The model is expressed as:
 
 $$ E[R_{i}] =R_{f} + \beta_{i} ( E[R_{m}] − R_{f}) $$
 
-where E[R_{i}] is the expected return of asset i, R_{f} is the risk-free rate, E[R_{m}] is the expected market return and β_{i} measures the sensitivity of the asset to market movements. CAPM implies that investors are only compensated for systematic risk, as idiosyncratic risk can be diversified away. It is frequently used in estimating the cost of equity and evaluating investment performance.
+where $E[R_{i}]$ is the expected return of asset $i$, $R_{f}$ is the risk-free rate, $E[R_{m}]$ is the expected market return and $\beta_{i}$ measures the sensitivity of the asset to market movements. CAPM implies that investors are only compensated for systematic risk, as idiosyncratic risk can be diversified away. It is frequently used in estimating the cost of equity and evaluating investment performance.
+
+### GARCH (Generalized AutoRegressive Conditional Heteroskedasticity)
+
+GARCH(1,1) is one of the simplest and most commonly used specifications within the broader GARCH family of models called GARCH(p, q). It is used to capture time-varying volatility in financial time series, particularly the phenomenon of volatility clustering. The conditional variance is modeled as:
+
+$$ \sigma^2_{t} = \omega + \alpha \epsilon^2_{t-1} + \beta \sigma_{t-1} $$
+ 
+where $\simga^2_{t}$ is the conditional variance at time $t$ and $\epsilon^2_{t-1}$ represents shocks at time $t-1$. The parameter $\alpha$ measures how strongly recent shocks $\epsilon_{t-1}$ affect current volatility. Then, $\beta$ is the parameter that captures how much of the previous period’s variance carries over into the current period. $\alpha$ and $\beta$ are usually referred to as reaction to shocks and persistence of volatility resepctively. Finally, $\omega$ provides the specific mathematical foundation that ensures positive volatility in all market conditions. 
+
+### Cholesky decomposition
+
+Cholesky decomposition is particularly useful in finance for generating correlated random variables from independent ones. Given a covariance matrix $\Sigma$, it can be factorized as:
+
+$$ \Sigma = L L^{T} $$ where $L$ is a lower triangular matrix. To simulate correlated variables, one starts with a vector $z$ of independent variables and applies the linear transformation:
+
+$$ x = L z $
+
+The resulting vector x has covariance:
+
+$$ cov(x)=L cov(z) L^{T} = L I L^{T} = \Sigma $$ 
+
+This works because the matrix $L$ effectively “mixes” the independent components of $z$, introducing the desired covariance structure. Each variable in $x$ becomes a linear combination of the underlying independent shocks, which induces correlation between them. This method is widely used in Monte Carlo simulations of asset returns.
 
 ## Structure
 
