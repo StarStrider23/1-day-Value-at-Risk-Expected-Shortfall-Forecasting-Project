@@ -63,7 +63,7 @@ $$ x = L z $$
 
 The resulting vector x has covariance:
 
-$$ \text{cov}(x) = L \text{cov}(z) L^{T} = L I L^{T} = \Sigma $$ 
+$$ \text{cov}(x) = L \text{cov}(z) L^{T} = L I L^{T} = L L^{T} = \Sigma $$ 
 
 This works because the matrix $L$ effectively “mixes” the independent components of $z$, introducing the desired covariance structure. Each variable in $x$ becomes a linear combination of the underlying independent shocks, which induces correlation between them. This method is widely used in Monte Carlo simulations of asset returns.
 
