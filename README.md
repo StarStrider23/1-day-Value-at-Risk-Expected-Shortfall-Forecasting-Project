@@ -23,6 +23,18 @@ Finally, model performance is evaluated through backtesting on the single-asset 
 
 It should also be mentioned that the dataset spaned approximately four years of daily observations (2022-01-01 to 2026-03-31), of which the last 1000 trading days were used for backtesting.
 
+## Background
+
+Since the project involves a number of advanced financial models, 
+
+### Student's t-distribution
+
+The Student’s t-distribution is widely used for statistical inference when dealing with small sample sizes and unknown population variance. Unlike the normal distribution, it has heavier tails, which makes it more robust to extreme observations. The t-statistic is defined as:
+
+$$ t = (\bar{X}_{n} - \mu) \frac{\sqrt{n}}{\sigma_{n}} $$
+
+where $\bar{X}_{n}$ is the sample mean of size $n$, $\sigma_{n}$ is the sample standard deviation and $\mu$ is the population mean. The shape of the distribution depends on the degrees of freedom $\nu \coloneq (n−1)$ and it converges to the normal distribution as the sample size increases, i.e. $$. It is commonly applied in hypothesis testing and confidence interval estimation.
+
 ## Structure
 
 The models folder contains the distribution, drift and volatility model definitions. The monte_carlo folder includes the Monte Carlo simulation engine file. The test folder contains the file test.py that implements the Kupiec and Christoffersen tests. Finally, main.py ties everything together and executes the workflow.
