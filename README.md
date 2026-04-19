@@ -33,7 +33,15 @@ The Student’s t-distribution is widely used for statistical inference when dea
 
 $$ t = (\overline{X_{n}} - \mu) \frac{\sqrt{n}}{\sigma_{n}} $$
 
-where $\overline{X_{n}}$ is the sample mean of size $n$, $\sigma_{n}$ is the sample standard deviation and $\mu$ is the population mean. The shape of the distribution depends on the degrees of freedom $\nu := (n−1)$ and it converges to the normal distribution as the sample size increases, i.e. $\nu \rightarrow \infinity $. It is commonly applied in hypothesis testing and confidence interval estimation.
+where $\overline{X_{n}}$ is the sample mean of size $n$, $\sigma_{n}$ is the sample standard deviation and $\mu$ is the population mean. The shape of the distribution depends on the degrees of freedom $\nu := (n−1)$ and it converges to the normal distribution as the sample size increases, i.e. $\nu \rightarrow \infty $. It is commonly applied in hypothesis testing and confidence interval estimation.
+
+### Capital Asset Pricibng Model (CAPM)
+
+CAPM provides a theoretical framework for determining the expected return of an asset based on its exposure to systematic market risk. The model is expressed as:
+
+$$ E[R_{i}] =R_{f} + \beta_{i} ( E[R_{m}] − R_{f}) $$
+
+where E[R_{i}] is the expected return of asset i, R_{f} is the risk-free rate, E[R_{m}] is the expected market return and β_{i} measures the sensitivity of the asset to market movements. CAPM implies that investors are only compensated for systematic risk, as idiosyncratic risk can be diversified away. It is frequently used in estimating the cost of equity and evaluating investment performance.
 
 ## Structure
 
