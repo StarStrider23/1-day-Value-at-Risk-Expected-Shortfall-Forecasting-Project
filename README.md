@@ -25,7 +25,7 @@ It should also be mentioned that the dataset spaned approximately four years of 
 
 ## Background
 
-Since the project incorporates several advanced financial models (t-distribution, GARCH, CAPM and Cholesky decomposition), it is necessary to briefly explain the ideas behind them as well as their mathematical structures in order to ensure clarity. However, there are also a number of concepts (normal distribution, constant drift and constant volatiltiy, Monte Carlo simulation) that are really basic and self-explanatory, and thus don't require any additional explanations.
+Since the project incorporates several advanced financial models (t-distribution, GARCH, CAPM and Cholesky decomposition), it is necessary to briefly explain the ideas behind them as well as their mathematical structures in order to ensure clarity. However, there are also a number of concepts (normal distribution, constant drift and volatiltiy, and Monte Carlo simulation) that are really basic and self-explanatory, and thus don't require any additional explanations.
 
 ### Student's t-distribution
 
