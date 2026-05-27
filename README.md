@@ -15,7 +15,7 @@ First, two alternative distributional assumptions for returns are considered: th
 
 Second, the drift component is modeled in two ways. A constant drift assumes a fixed expected return over time, while a CAPM-based drift incorporates systematic market risk by linking expected returns to a market factor.
 
-Third, volatility is modeled either as constant or using a GARCH(1,1) process, which allows volatility to evolve over time and capture clustering effects commonly observed in financial markets.
+Third, volatility is modeled either as constant or using a GARCH(1,1) process, which allows volatility to evolve over time and captures clustering effects commonly observed in financial markets.
 
 While the single-asset portfolio included only one share of MSFT, for the multi-asset part, the portfolio was chosen to be consisting of GOOGL, MSFT and AAPL (with equal weights). Correlated asset returns are generated using Cholesky decomposition of the covariance matrix, ensuring that simulated paths preserve the empirical correlation structure between assets.
 
