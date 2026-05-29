@@ -1,6 +1,6 @@
 # 1-day Value-at-Risk & Expected Shortfall Forecasting
 
-Project by Alexsey Chernichenko
+Project by Alexsey Chernichenko. March 2026.
 
 ## Project Goal
 
