@@ -9,13 +9,13 @@ GARCH(1,1) volatility modelling), and Monte Carlo simulation to estimate 1-day V
 
 ## Methodology & Models
 
-The project is based on a Monte Carlo simulation framework for forecasting 1-day risk measures. Asset returns are modeled using Geometric Brownian Motion (GBM), which assumes that returns follow a stochastic process with a drift and a volatility component. Within this framework, different assumptions are tested to evaluate their impact on risk estimation.
+The project is based on a Monte Carlo simulation framework for forecasting 1-day risk measures. Asset returns are modeled using Geometric Brownian Motion (GBM), which assumes that returns follow a continuous stochastic process with a drift and a volatility component. Within this framework different assumptions are tested to evaluate their impact on risk estimation.
 
-First, two alternative distributional assumptions for returns are considered: the Normal distribution, which is standard in many financial models but underestimates extreme events and the Student’s t-distribution, which captures heavy tails and is therefore more suitable for modeling large market moves.
+First, two alternative distributional assumptions for returns are considered: the Normal distribution (standard in many financial models but underestimates extreme events) and the Student’s t-distribution (captures heavy tails and is therefore more suitable for modeling large market moves).
 
-Second, the drift component is modeled in two ways. A constant drift assumes a fixed expected return over time, while a CAPM-based drift incorporates systematic market risk by linking expected returns to a market factor.
+Second, the drift component is modeled in two ways. A constant drift assumes a fixed expected return over time while a CAPM-based drift incorporates systematic market risk by linking expected returns to a market factor.
 
-Third, volatility is modeled either as constant or using a GARCH(1,1) process, which allows volatility to evolve over time and captures clustering effects commonly observed in financial markets.
+Third, volatility is modeled either as constant or using a GARCH(1,1) process. The latter allows volatility to evolve over time and able to capture clustering effects commonly observed in financial markets.
 
 While the single-asset portfolio included only one share of MSFT, for the multi-asset part, the portfolio was chosen to be consisting of GOOGL, MSFT and AAPL (with equal weights). Correlated asset returns are generated using Cholesky decomposition of the covariance matrix, ensuring that simulated paths preserve the empirical correlation structure between assets.
 
@@ -29,7 +29,7 @@ Since the project incorporates several advanced financial models (t-distribution
 
 ### Student's t-distribution
 
-The Student’s t-distribution is widely used for statistical inference when dealing with small sample sizes and unknown population variance. Unlike the normal distribution, it has heavier tails, which makes it more robust to extreme observations. The t-statistic is defined as:
+The Student’s t-distribution is widely used for statistical inference when dealing with small sample sizes and unknown population variance. Unlike the normal distribution it has heavier tails which makes it more robust to extreme observations. The t-statistic is defined as:
 
 $$ t = (\overline{X_{n}} - \mu) \frac{\sqrt{n}}{\sigma_{n}} $$
 
@@ -41,7 +41,7 @@ CAPM provides a theoretical framework for determining the expected return of an 
 
 $$ E[R_{i}] =R_{f} + \beta_{i} ( E[R_{m}] − R_{f}) $$
 
-where $E[R_{i}]$ is the expected return of asset $i$, $R_{f}$ is the risk-free rate, $E[R_{m}]$ is the expected market return and $\beta_{i}$ measures the sensitivity of the asset to market movements. CAPM implies that investors are only compensated for systematic risk, as idiosyncratic risk can be diversified away. It is frequently used in estimating the cost of equity and evaluating investment performance.
+where $E[R_{i}]$ is the expected return of asset $i$, $R_{f}$ is the risk-free rate, $E[R_{m}]$ is the expected market return and $\beta_{i}$ measures the sensitivity of the asset to market movements. CAPM implies that investors are only compensated for systematic risk, as unsystematic risk can be diversified away. It is frequently used in estimating the cost of equity and evaluating investment performance.
 
 ### GARCH (Generalized AutoRegressive Conditional Heteroskedasticity)
 
@@ -65,7 +65,7 @@ The resulting vector x has covariance:
 
 $$ \text{cov}(x) = L \text{cov}(z) L^{T} = L I L^{T} = L L^{T} = \Sigma $$ 
 
-This works because the matrix $L$ effectively “mixes” the independent components of $z$, introducing the desired covariance structure. Each variable in $x$ becomes a linear combination of the underlying independent shocks, which induces correlation between them. This method is widely used in Monte Carlo simulations of asset returns.
+This works because the matrix $L$ effectively “mixes” the independent components of $z$ introducing the desired covariance structure. Each variable in $x$ becomes a linear combination of the underlying independent shocks which induces correlation between them. This method is widely used in Monte Carlo simulations of asset returns.
 
 ## Structure
 
@@ -142,24 +142,23 @@ Historical ES = -0.0491
 
 ## Discussion
 
-The results reveal a clear and somewhat non-trivial pattern in the performance of the different models. For the single-asset case, models based on the Student’s t-distribution consistently produce more accurate estimates of both VaR and ES compared to their normal counterparts. This is particularly evident for Expected Shortfall, where the normal distribution significantly underestimates tail risk. This finding aligns with well-known stylized facts in financial markets, namely that individual asset returns exhibit fat tails and extreme events occur more frequently than predicted by the normal distribution.
+The results reveal a clear and somewhat non-trivial pattern in the performance of the different models. For the single-asset case, models based on the Student’s t-distribution consistently produce more accurate estimates of both VaR and ES compared to their normal counterparts. This is particularly evident for Expected Shortfall, where the normal distribution significantly underestimates tail risk. This observation aligns well with well-known facts in financial markets, namely that individual asset returns exhibit fat tails and extreme events occur more frequently than predicted by the normal distribution.
 
-However, this pattern reverses in the multi-asset portfolio setting. In contrast to the single-asset results, models based on the Student’s t-distribution systematically overestimate risk, producing VaR and ES values that deviate substantially from historical benchmarks. Instead, models assuming normally distributed returns provide more accurate and stable estimates for the diversified portfolio, although they still exhibit a tendency to underestimate risk to a moderate extent. This difference can be explained by the effect of diversification: when combining multiple assets, idiosyncratic extreme events tend to offset each other, leading to a distribution of portfolio returns that is closer to normal. As a result, heavy-tailed assumptions appropriate at the individual asset level may become overly conservative when applied to an aggregated portfolio, suggesting that extreme tail behavior is largely idiosyncratic and diversifiable, while some degree of tail risk remains even after diversification.
+However, this pattern reverses in the multi-asset portfolio setting. In contrast to the single-asset results, models based on the Student’s t-distribution systematically overestimate risk, producing VaR and ES values that deviate substantially from the historical benchmarks. Instead, models that assume normally distributed returns provide more accurate and stable estimates for the many-asset portfolio, although they still exhibit a tendency to underestimate risk to a moderate extent. Potentially, this could be described by the effect of diversification, however as the chosen assets belong to the tech sector, most likely the assets are highly correlated which weakens the diversification argument. Still, this may partially explain it. Another possibility is simply that the normal distribution fit the multi-asset portfolio returns better than the t-distribution in the sample.
 
-Across both settings, the inclusion of CAPM-based drift and GARCH(1,1) volatility does not lead to consistent improvements in forecasting performance. While these models are theoretically more sophisticated and capture important financial phenomena such as time-varying volatility and systematic risk exposure, their benefits appear limited in the context of unconditional 1-day risk forecasting. In practice, the additional estimation complexity may introduce noise that offsets their theoretical advantages.
+Across the settings, the inclusion of CAPM-based drift and GARCH(1,1) volatility does not lead to consistent improvements in forecasting performance. While these models are theoretically more complex and capture important financial phenomena such as time-varying volatility and systematic risk exposure, their benefits appear limited in the context of 1-day risk forecasting.
 
-The backtesting results for the single asset indicate that all models produce an acceptable number of VaR violations and pass both the Kupiec and Christoffersen tests. In particular, every model produced only 7 violations out of 1000 observations, which is less than 1%. Notably, many models gave identical results in these tests. This reflects the sparsity of extreme events at the 99th percentile over 1000 days: when expected violations are few, different models often identify the same violating days. Testing at the 95th percentile confirms this explanation, producing distinct results across models. These observations highlight that while Kupiec and Christoffersen tests assess statistical adequacy in terms of coverage and independence, they may not sufficiently capture differences in tail magnitude, which are better reflected in the ES metric.
+The backtesting results for the single asset indicate that all models produce an acceptable number of VaR violations and pass both the Kupiec and Christoffersen tests. In particular, every model produced only 7 violations out of 1000 observations, which is less, but close to 1%. Notably, many models gave identical results in these tests, which may rise suspicions. Testing at the 95th percentile confirms this explanation, producing distinct results across the models. These observations highlight that while Kupiec and Christoffersen tests assess statistical adequacy in terms of coverage and independence, they may not sufficiently capture differences in tail magnitude which are better reflected in the ES metric.
 
-Finally, running multiple simulations enables the computation of summary statistics such as mean, standard deviation, and minimum/maximum values for both VaR and ES. These aggregated metrics provide a more robust picture of model performance than single-run results, mitigating the effects of sampling variability and highlighting differences between models in a statistically meaningful way.
-Overall, the findings emphasize that model selection should consider both the aggregation level and the specific risk measure of interest. Heavy-tailed distributions are essential for accurately modeling individual asset risk, while simpler normal-based models may be preferable for diversified portfolios where extreme risks are naturally mitigated. Multi-run summary statistics further enhance the reliability and interpretability of the results, supporting informed decision-making in risk management.
+Finally, running multiple simulations enables the computation of summary statistics such as mean, standard deviation and minimum/maximum values for both VaR and ES. These aggregated metrics provide a more robust picture of model performance than single-run results, mitigating the effects of sampling variability.
 
 ## Model ranking
 
-With that being said, let's rank the models based on their precision. The proposed way to rank the models is according to a simple aggregate error measure which is constructed based on the percentual deviation of model-implied risk measures from their historical counterparts. Specifically, for each model, the absolute percetage deviation of VaR and ES are summed:  
+With everything said, let's rank the models based on their precision. The proposed way to rank the models is according to a simple aggregate error measure which is constructed based on the percentual deviation of model-implied risk measures from their historical counterparts. Specifically, for each model, the absolute percetage deviation of VaR and ES are simply summed:  
 
 Score = |VaR % error| + |ES % error|  
   
-Models are then ranked according to this score, with lower values indicating better overall performance. This approach avoids the need to impose arbitrary weighting schemes on VaR and ES, ensuring that the ranking remains transparent and reproducible.  
+Models are then ranked according to this score - lower values indicate better overall performance. This approach avoids the need to impose arbitrary weightes for VaR and ES.  
 
 However, in practice, greater emphasis is typically placed on Expected Shortfall, as it captures tail risk beyond the VaR threshold and is preferred in regulatory frameworks such as Basel III. However, assigning an exact relative weight between VaR and ES is inherently subjective and difficult to justify empirically. To assess the sensitivity of the results, alternative specifications with higher weight assigned to ES were considered. These adjustments did not materially affect the ranking of models, suggesting that the conclusions are robust to reasonable variations in weighting.  
 
@@ -191,12 +190,12 @@ However, in practice, greater emphasis is typically placed on Expected Shortfall
 
 ### Side comment
   
-However, one thing should be added. In cases where differences in performance are marginal, there is little justification for favoring more complex models. According to the principle of parsimony, simpler models are generally preferable, as they achieve similar predictive accuracy with fewer assumptions, reduced estimation uncertainty and lower computional and implementation effort.
+However, one thing should be added. In cases where differences in performance are marginal, there is little justification for favoring more complex models. According to the principle of parsimony/Occam's razor, simpler models are generally preferable - they achieve similar predictive accuracy with fewer assumptions, reduced estimation uncertainty and lower computional and implementation efforts.
 
 ## Outlook
 
-This project focuses on 1-day ahead risk forecasting, but the framework can be naturally extended to multi-day (n-day) VaR and Expected Shortfall.
+This project focuses on 1-day ahead risk forecasting, but the framework can be naturally extended to multi-day (n-day) VaR and Expected Shortfall forecasting.
 
-For models based on constant volatility, such as standard Geometric Brownian Motion with normally distributed returns, multi-day risk measures can be approximated using the square-root-of-time rule, where volatility (and therefore VaR and ES) scales with √n. This approach relies on the assumption of independent and identically distributed returns.
+For models based on constant volatility and drift, such as standard Geometric Brownian Motion with normally distributed returns, multi-day risk measures can be approximated using the square-root-of-time rule, where volatility (and therefore VaR and ES) scales with $\sqrt{n}$.
 
 However, this scaling does not apply to GARCH-type models, where volatility evolves over time and depends on past shocks. In such models, returns are heteroskedastic and serially dependent, meaning that future risk cannot be obtained through simple scaling. Instead, multi-day forecasts require iterative simulation or recursive volatility forecasting, which significantly increases computational complexity.
